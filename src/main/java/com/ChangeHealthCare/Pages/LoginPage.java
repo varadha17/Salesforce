@@ -74,7 +74,7 @@ public class LoginPage extends base {
 	WebElement unread;
 	
 	@FindBy(xpath="//span[contains(text(),'(External Email) Sandbox: Verify your identity in Salesforce')]")
-	WebElement text;
+	WebElement Subjecttext;
 	
 	@FindBy(xpath="//p[contains(normalize-space(),'Verification Code:')]")
 	WebElement EmailBodyMessage;
@@ -153,12 +153,12 @@ public class LoginPage extends base {
 		unread.click();
 		Thread.sleep(5000);
 		
-		getEmailSubject = text.getText();
+		getEmailSubject = Subjecttext.getText();
 		System.out.println(getEmailSubject);
 		
-		if(text.isDisplayed()) {
+		if(Subjecttext.isDisplayed()) {
 			Thread.sleep(2000);
-			text.click();
+			Subjecttext.click();
 		}
 
 		getEmailBodyMessage = EmailBodyMessage.getText();
