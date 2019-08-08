@@ -28,11 +28,7 @@ public class LoginPage extends base {
 	 */
 	private static Set<String> window;
 	private static Iterator<String> iterate;
-	private static String parentWindow;
-	private static String childWindow;
-	private static String code;
-	private static String getEmailSubject;
-	private static String getEmailBodyMessage;
+	private static String parentWindow, childWindow, code, getEmailSubject, getEmailBodyMessage;
 	private Robot newTab;
 	
 	/**
@@ -91,7 +87,6 @@ public class LoginPage extends base {
 	
 	@FindBy(id="save")
 	WebElement VerifyButton;
-
 
 	/**
 	 * @tag LoginPage
